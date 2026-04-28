@@ -1,0 +1,43 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {},
+  "mcp": {
+    "code-review-graph": {
+      "type": "local",
+      "command": [
+        "code-review-graph",
+        "serve"
+      ],
+      "enabled": true
+    }
+  },
+  "agent": {
+    "planner": {
+      "model": "opencode/minimax-m2.5-free",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "glob": false,
+        "grep": false
+      }
+    },
+    "coder": {
+      "model": "ollama-cloud/qwen3-coder:480b"
+    },
+    "debugger": {
+      "model": "openrouter/google/gemma-4-31b-it:free"
+    },
+    "writer": {
+      "model": "github-copilot/claude-haiku-4.5"
+    },
+    "archivist": {
+      "model": "github-copilot/claude-haiku-4.5"
+    },
+    "bug-fixer": {
+      "model": "github-copilot/gpt-5-mini"
+    },
+    "graph-explorer": {
+      "model": "github-copilot/claude-haiku-4.5"
+    }
+  }
+}
