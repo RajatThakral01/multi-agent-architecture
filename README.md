@@ -6,13 +6,10 @@ A structured, prompt-based multi-agent system for software development. Three pr
 
 ---
 
-## How it works
+## Architecture Overview
 
-```
-Human → Planner → Coder → Debugger → (loop or close)
-                ↓            ↓
-             Writer       Writer
-```
+![Architecture Diagram](./docs/images/architecture.png)
+
 
 - **Planner** reads project state and produces focused task prompts
 - **Coder** implements exactly one task per session, commits, and signals done
@@ -73,12 +70,12 @@ Open the `agents/planner .md` prompt in your LLM tool. Planner will read `coordi
 │
 ├── agents/                  agent prompt files (load into your LLM tool)
 │   ├── planner .md
-│   ├── coder.md
-│   ├── debugger.md
-│   ├── writer.md
-│   ├── archivist.md
-│   ├── bug-fixer.md
-│   └── graph-explorer.md
+21:   ├── coder.md
+22:   ├── debugger.md
+23:   ├── writer.md
+24:   ├── archivist.md
+25:   ├── bug-fixer.md
+26:   └── graph-explorer.md
 │
 ├── commands/                reusable slash commands
 │   └── bootstrap.md
