@@ -1,5 +1,7 @@
 # Multi-Agent Development System
 
+![Multi-agent development system architecture](https://github.com/user-attachments/assets/260f83f0-4b19-467c-a0fb-7a74b98f3781)
+
 A structured, prompt-based multi-agent system for software development. Three primary agents — **Planner**, **Coder**, and **Debugger** — coordinate through shared files. Sub-agents handle focused tasks: writing coordination files, archiving, bug fixing, and code exploration. All work is reviewed and approved by a Human at every checkpoint.
 
 > Built for use with [opencode](https://opencode.ai) or any LLM tool that supports loading markdown agent prompts.
